@@ -1,6 +1,27 @@
-@chat_HostAddress = http://localhost:5022
+# @chat_HostAddress = http://localhost:5022
 
-GET {{chat_HostAddress}}/weatherforecast/
+POST https://localhost:7159/api/chat/message
+Content-Type: application/json
+# Accept: application/json
+{
+  "message": "STIIL It's Working!!!!!"
+}
+###
+PUT https://localhost:7159/api/chat/update/4
+Content-Type: application/json
+# Accept: application/json
+{
+  "message": "It's no!!!!!"
+}
+
+###
+GET https://localhost:7159/api/chat/messages
 Accept: application/json
 
 ###
+GET https://localhost:7159/api/chat/message/3
+Accept: application/json
+
+###
+GET https://localhost:7159/api/chat/delete/3
+Accept: application/json
